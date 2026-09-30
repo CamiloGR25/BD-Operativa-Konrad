@@ -13,9 +13,8 @@ Prototipo educativo para estudiantes de Ingeniería de Sistemas.
 
 ## Cómo ejecutar
 
-1. Descomprime el archivo ZIP.
-2. Abre `index.html` en Chrome, Edge o Firefox.
-3. No necesitas instalar dependencias.
+1. Abre `index.html` en Chrome, Edge o Firefox.
+2. No necesitas instalar dependencias.
 
 ## Contenido
 
@@ -43,11 +42,3 @@ El simulador incluye módulos sobre:
 El editor incluido es un simulador pedagógico de un subconjunto de SQL. No incorpora un motor SQLite real dentro del navegador. Su propósito es enseñar sintaxis, relaciones, integridad y consecuencias de las operaciones de manera controlada.
 
 Una siguiente versión puede integrar SQLite real mediante WebAssembly (WASM), manteniendo la interfaz actual.
-
-
-## Ajustes pedagógicos de esta versión
-
-- Los retos prácticos comienzan con el editor vacío.
-- La respuesta correcta no aparece automáticamente.
-- El botón `Ayuda / ver solución` muestra una pista y una solución de referencia sin copiarla al editor.
-- Los ejemplos de la explicación teórica son diferentes de los ejercicios prácticos para evitar entregar la respuesta antes de que el estudiante resuelva el reto.
