@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratorio de Base de Datos Operativa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="dbsim" class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <h1>Base de Datos Operativa</h1>
+        <p>Laboratorio interactivo para Ingeniería de Sistemas</p>
+      </div>
+
+      <nav id="moduleNav" class="module-nav" aria-label="Módulos del simulador"></nav>
+
+      <div class="progress-card">
+        <div class="progress-row">
+          <span>Progreso</span>
+          <span id="progressText">0%</span>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <p><span id="completedText">0</span> de 8 módulos completados</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="module-header">
+        <div>
+          <span id="moduleEyebrow" class="eyebrow"></span>
+          <h2 id="moduleTitle"></h2>
+          <p id="moduleIntro"></p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Modo de aprendizaje">
+          <button id="theoryTab" class="tab-btn active" type="button">Teoría</button>
+          <button id="practiceTab" class="tab-btn" type="button">Práctica</button>
+        </div>
+      </header>
+
+      <section id="theoryPanel" class="panel-stack"></section>
+
+      <section id="practicePanel" class="practice-layout hidden">
+        <aside class="schema-panel">
+          <h3>Explorador de base de datos</h3>
+          <div id="schemaTree"></div>
+        </aside>
+
+        <div class="practice-main">
+          <section class="card">
+            <div class="challenge-head">
+              <div>
+                <h3>Reto práctico</h3>
+                <p id="challengeText"></p>
+              </div>
+              <span id="difficulty" class="badge"></span>
+            </div>
+
+            <div class="objective-box">
+              <span>Objetivo</span>
+              <p id="objectiveText"></p>
+            </div>
+          </section>
+
+          <section class="card">
+            <label for="sqlEditor" class="section-title">Editor SQL</label>
+            <textarea id="sqlEditor" spellcheck="false" aria-describedby="editorHelp"></textarea>
+            <p id="editorHelp" class="help">
+              Este laboratorio ejecuta un subconjunto educativo de SQL y simula comportamientos clave de SQLite.
+            </p>
+
+            <div class="actions">
+              <button id="runBtn" class="primary-btn" type="button">Ejecutar ▶</button>
+              <button id="hintBtn" class="secondary-btn" type="button">Ayuda / ver solución</button>
+              <button id="resetBtn" class="secondary-btn" type="button">Restablecer datos</button>
+            </div>
+
+            <div id="helpPanel" class="help-panel hidden" aria-live="polite">
+              <h4>Ayuda para el reto</h4>
+              <p id="helpHint" class="muted"></p>
+              <div class="solution-label">Solución de referencia</div>
+              <pre id="helpSolution" class="codebox"></pre>
+              <p class="muted help-note">
+                La solución no se inserta automáticamente en el editor. Léela, ciérrala si lo deseas y escribe tu propia sentencia.
+              </p>
+            </div>
+          </section>
+
+          <section id="feedback" class="card" aria-live="polite">
+            <h3>Resultado y retroalimentación</h3>
+            <p class="muted">Ejecuta una instrucción para observar el resultado.</p>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
